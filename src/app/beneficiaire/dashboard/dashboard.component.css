@@ -1,0 +1,25 @@
+.container {
+  margin-top: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+  margin-top: 60px
+}
+
+.table-responsive {
+  margin-top: 20px;
+}
+
+.support-chat {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Décalage des éléments à gauche */
+@media (min-width: 768px) {
+  .left-column {
+      margin-top: 60px; /* Augmenter la marge vers le bas */
+  }
+}

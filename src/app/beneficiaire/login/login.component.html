@@ -1,0 +1,9 @@
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()" class="form" id="form2">
+    <h2 class="form__title">Connectez-vous</h2>
+    <input type="email" placeholder="Email" class="input" [(ngModel)]="email" name="email" required>
+    <input type="password" placeholder="Password" class="input" [(ngModel)]="password" name="password" required>
+    <a href="#" class="link">Forgot your password?</a>
+    <button type="submit" class="btn">Sign In</button>
+  </form>
+</div>

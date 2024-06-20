@@ -1,0 +1,58 @@
+<router-outlet></router-outlet>
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <!-- Tableau de gauche -->
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tracking No.</th>
+                        <th>Statut</th>
+                        <th>Date d'Étude</th>
+                        <th>Nombre de Demandes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let demande of demandes">
+                        <td>{{ demande.id }}</td>
+                        <td>{{ demande.statut }}</td>
+                        <td>{{ demande.date_etude }}</td>
+                        <td>{{ demande.nb_demande }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section Transaction History à droite -->
+        <div class="col-md-6">
+                <div class="card">
+            <h5>Transaction History</h5>
+            <div class="list-group">
+                <div *ngFor="let transaction of transactionHistory" class="list-group-item">
+                    <div class="d-flex justify-content-between">
+                        <div>Order #{{ transaction.id }}</div>
+                        <div>{{ transaction.date_etude | date: 'medium' }}</div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div>Status: {{ transaction.statut }}</div>
+                        <div>Medicament: {{ transaction.nom_medicament }}</div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div>Nombre de demande: {{ transaction.nb_demande }}</div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            <!-- Section Contact & Support -->
+            <div class="mt-5">
+                <h5>Contact & Support</h5>
+                <p>Typical reply within 5 minutes</p>
+                <div class="support-chat">
+                    <a href="mailto:maimounathiammm@gmail.com">Support</a>
+                    <p>Phone: +221 77 875 87 53</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
