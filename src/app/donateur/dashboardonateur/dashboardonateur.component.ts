@@ -1,17 +1,17 @@
+import { NavbarComponent } from './../navbar/navbar.component';
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from '../navbar/navbar.component';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-dashboardonateur',
   standalone: true,
-  imports: [RouterOutlet,NavbarComponent,CommonModule],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+  imports: [RouterOutlet,CommonModule,NavbarComponent],
+  templateUrl: './dashboardonateur.component.html',
+  styleUrl: './dashboardonateur.component.css'
 })
-export class DashboardComponent implements OnInit {
+export class DashboardonateurComponent implements OnInit{
   demandes: any[] = [];
   totalDemandes: number = 0;
   totalApprouves: number = 0;
@@ -24,14 +24,14 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     const user = JSON.parse(localStorage.getItem('user')!);
-    const beneficiaireId = user.id;
+    const donId = user.id;
 
-    this.http.get<any[]>(`http://localhost/backend/beneficiaires/demandes.php?id_beneficiaire=${beneficiaireId}`)
+    this.http.get<any[]>(`http://localhost/backend/dons/dons.php?id_don=${donId}`)
       .subscribe({
         next: response => {
           this.demandes = response;
           this.calculateTotals();
-          this.retrieveTransactionHistory(beneficiaireId); // Appel de la fonction pour récupérer l'historique des transactions
+          this.retrieveTransactionHistory(donId); // Appel de la fonction pour récupérer l'historique des transactions
         },
         error: error => {
           console.error('Erreur lors de la récupération des demandes:', error);
@@ -47,8 +47,8 @@ export class DashboardComponent implements OnInit {
     this.totalEnAttente = this.demandes.filter(d => d.statut === 'en cours').length;
   }
 
-  retrieveTransactionHistory(beneficiaireId: number): void {
-    this.http.get<any[]>(`http://localhost/backend/beneficiaires/medicaments.php?id_beneficiaire=${beneficiaireId}`)
+  retrieveTransactionHistory(donId: number): void {
+    this.http.get<any[]>(`http://localhost/backend/dons/medicaments.php?id_don=${donId}`)
       .subscribe({
         next: response => {
           this.transactionHistory = response;

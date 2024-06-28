@@ -1,0 +1,107 @@
+/* Container spacing */
+.container {
+    margin-top: 20px;
+    background-image: url('../img/PHARMACIESociale.png'); /* Path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Card styles */
+  .card {
+    margin-bottom: 20px;
+    border: 1px solid #d4edda;
+    background-color: #7de1d045;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h5 {
+    color: #155724;
+  }
+  
+  /* Table styles */
+  .table {
+    background-color: #ffffff;
+  }
+  
+  .table thead {
+    background-color: #e9ecef;
+  }
+  
+  .table th {
+    color: #155724;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  /* Support chat styles */
+  .support-chat {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #e2e3e5;
+  }
+  
+  .list-group-item {
+    background-color: #f8f9fa;
+    border: 1px solid #d4edda;
+  }
+  
+  .list-group-item .d-flex div {
+    color: #155724;
+  }
+  
+  /* Left column margin */
+  @media (min-width: 768px) {
+    .left-column {
+      margin-top: 60px;
+    }
+  }
+  
+  /* Pharmacy colors */
+  .bg-primary {
+    background-color: #007bff !important;
+  }
+  
+  .bg-secondary {
+    background-color: #6c757d !important;
+  }
+  
+  .bg-success {
+    background-color: #28a745 !important;
+  }
+  
+  .bg-danger {
+    background-color: #dc3545 !important;
+  }
+  
+  .bg-warning {
+    background-color: #ffc107 !important;
+  }
+  
+  .bg-info {
+    background-color: #17a2b8 !important;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .bg-dark {
+    background-color: #343a40 !important;
+  }
+  
+  .text-white {
+    color: #fff !important;
+  }
+  
+  .text-muted {
+    color: #6c757d !important;
+  }
+  

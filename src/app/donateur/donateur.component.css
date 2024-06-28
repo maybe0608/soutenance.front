@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./img/PHARMACIESociale.png'); /* Remplacez par le chemin de votre image de fond */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Modifier pour aligner le bouton à gauche */
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    background-color: #007bff; /* Couleur bleue */
+    color: white; /* Texte en blanc */
+    border: none; /* Pas de bordure */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Couleur bleue foncée au survol */
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.47);
+    width: 400px; /* Augmenter la largeur du formulaire */
+    height: auto; /* Ajuster la hauteur selon le contenu */
+    padding: 40px; /* Augmenter la taille de la zone de remplissage */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Espace entre le bouton et le formulaire */
+    display: flex; /* Utilisation de flexbox */
+    flex-direction: column; /* Empiler les éléments verticalement */
+    align-items: center; /* Centrer les éléments horizontalement */
+}

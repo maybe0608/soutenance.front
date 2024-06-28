@@ -1,0 +1,41 @@
+/* nav-left.component.css */
+
+.pc-h-item.pc-sidebar-collapse {
+    position: fixed;
+    top: 10px; /* Ajustez selon vos besoins */
+    left: 10px; /* Ajustez selon vos besoins */
+    z-index: 1100; /* Doit être plus élevé que celui du menu */
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .full-page-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Largeur souhaitée pour le menu */
+    height: 100%;
+    background-color: #f8f9fa; /* Couleur de fond */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding-top: 60px; /* Pour compenser la barre de navigation si nécessaire */
+  }
+  
+  .full-page-nav ul {
+    padding-left: 0;
+  }
+  
+  .full-page-nav .pc-h-item {
+    padding: 10px 15px;
+  }
+  
+  .full-page-nav .pc-head-link {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .full-page-nav .pc-head-link:hover {
+    color: #007bff;
+  }
+  

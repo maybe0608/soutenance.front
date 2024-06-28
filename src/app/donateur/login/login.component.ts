@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
-
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule,RouterOutlet,HttpClientModule,FormsModule],
+  imports: [CommonModule,HttpClientModule,FormsModule,RouterOutlet],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -27,15 +26,19 @@ export class LoginComponent implements OnInit{
       email: this.email,
       password: this.password
     };
-
-    this.http.post<any>('http://localhost/backend/beneficiaires/login_beneficiaire.php', credentials)
+  
+    this.http.post<any>('http://localhost/backend/donateurs/login_donateur.php', credentials)
       .subscribe({
         next: response => {
-          console.log('Login successful', response);
-          // Store user information in localStorage
-          localStorage.setItem('user', JSON.stringify(response.user));
-          // Redirect to the user's account page
-          this.router.navigate(['beneficiaire/monCompte']);
+          if (response.success) {
+            console.log('Login successful', response);
+            // Store user information in localStorage
+            localStorage.setItem('user', JSON.stringify(response.user));
+            // Redirect to the user's account page
+            this.router.navigate(['donateur/monCompte']);
+          } else {
+            this.errorMessage = 'Email ou mot de passe incorrect.';
+          }
         },
         error: (error: HttpErrorResponse) => {
           if (error.status === 401) {
@@ -47,4 +50,4 @@ export class LoginComponent implements OnInit{
         }
       });
   }
-}
+}  

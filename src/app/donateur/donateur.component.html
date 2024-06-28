@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="button-container">
+      <button class="btn" *ngIf="!showSignup" (click)="toggleForm(true)">Inscription</button>
+      <button class="btn" *ngIf="showSignup" (click)="toggleForm(false)">Connexion</button>
+    </div>
+    <div class="form-container">
+      <app-signup *ngIf="showSignup"></app-signup>
+      <app-login *ngIf="!showSignup"></app-login>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  

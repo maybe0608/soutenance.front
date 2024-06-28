@@ -1,0 +1,25 @@
+/* nav-left.component.scss */
+.pc-h-item {
+    padding: 0 15px;
+    a {
+      color: #333;
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+  
+  /* nav-right.component.scss */
+  .pc-h-item {
+    position: relative;
+    padding: 0 15px;
+    .pc-head-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+  

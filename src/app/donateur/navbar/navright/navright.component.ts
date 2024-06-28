@@ -1,26 +1,25 @@
 import { CommonModule } from '@angular/common';
-import { Component, Output, EventEmitter, Input, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, Input, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { IconModule } from '@ant-design/icons-angular';
-import { NgbDropdownModule, NgbNav, NgbNavContent, NgbNavItem, NgbNavLink, NgbNavOutlet } from '@ng-bootstrap/ng-bootstrap';
-import { HttpClient,  } from '@angular/common/http';
+import { NgbDropdownModule, NgbNavItem, NgbNavLink, NgbNavContent, NgbNavOutlet, NgbNav } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from '../../login/login.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-nav-right',
+  selector: 'app-navright',
   standalone: true,
   imports: [CommonModule,RouterModule,IconModule,NgbDropdownModule,NgbNavItem,NgbNavLink,NgbNavContent,NgbNavOutlet,NgbNav,LoginComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA] ,
-  templateUrl: './nav-right.component.html',
-  styleUrl: './nav-right.component.css'
+  templateUrl: './navright.component.html',
+  styleUrl: './navright.component.css'
 })
-export class NavRightComponent implements OnInit{
+export class NavrightComponent implements OnInit{
   @Input() styleSelectorToggle: any;
  
   notifications: any[] = [];
-  apiUrl = 'http://localhost/backend/beneficiaires';
-
-  constructor(private router: Router, private http: HttpClient) { }
+  apiUrl = 'http://localhost/backend/donateurs';
+constructor(private router: Router, private http: HttpClient) { }
 
   profile: any;
 
@@ -35,13 +34,12 @@ export class NavRightComponent implements OnInit{
   logout() {
     localStorage.removeItem('user');
     this.router.navigate(['/']); 
-
     // Redirection après la déconnexion si nécessaire
   }
 
 
   getNotifications(id: number): void {
-    this.http.get(`${this.apiUrl}/beneficiaire_notif.php?id_beneficiaire=${id}`).subscribe(
+    this.http.get(`${this.apiUrl}/donateur_notif.php?id_donateur=${id}`).subscribe(
       (data: any) => {
         this.notifications = data;
       },
