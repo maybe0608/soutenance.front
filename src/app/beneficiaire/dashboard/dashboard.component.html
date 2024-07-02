@@ -10,7 +10,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Tracking No.</th>
+                                <th>Numeros</th>
                                 <th>Statut</th>
                                 <th>Date d'Étude</th>
                                 <th>Nombre de Demandes</th>
@@ -33,11 +33,11 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h5>Transaction History</h5>
+                    <h5>Historique des demandes recuperées</h5>
                     <div class="list-group">
                         <div *ngFor="let transaction of transactionHistory" class="list-group-item">
                             <div class="d-flex justify-content-between">
-                                <div>Order #{{ transaction.id }}</div>
+                                <div>Numeros #{{ transaction.id }}</div>
                                 <div>{{ transaction.date_etude | date: 'medium' }}</div>
                             </div>
                             <div class="d-flex justify-content-between">

@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-login:not(p)',
   standalone: true,
   imports: [CommonModule,HttpClientModule,FormsModule,RouterOutlet],
   templateUrl: './login.component.html',

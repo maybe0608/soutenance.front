@@ -1,0 +1,28 @@
+li.selected {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+li {
+  cursor: pointer;
+}
+
+.modal-body input {
+  margin-top: 10px;
+}
+
+.modal-body ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal-body ul li {
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+}
+
+.modal-body ul li:hover {
+  background-color: #f0f0f0;
+}

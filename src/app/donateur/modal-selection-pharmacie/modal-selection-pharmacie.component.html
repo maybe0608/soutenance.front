@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <h5 class="modal-title">Sélectionner une Pharmacie</h5>
+  <button type="button" class="close" (click)="dismissModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <ul>
+    <li *ngFor="let pharmacie of pharmacies" (click)="selectPharmacie(pharmacie)">
+      {{ pharmacie.nom }}
+    </li>
+  </ul>
+  <div *ngIf="selectedPharmacie">
+    <button type="button" class="btn btn-primary" (click)="showMedicamentForm = true">Suivant</button>
+  </div>
+  <div *ngIf="showMedicamentForm">
+    <input type="text" [(ngModel)]="medicamentSearch" (input)="filterMedicaments()" placeholder="Rechercher un médicament">
+    <ul>
+      <li *ngFor="let medicament of filteredMedicaments" (click)="selectMedicament(medicament)">
+        {{ medicament.nom }}
+      </li>
+    </ul>
+    <input type="number" id="quantiteInput" [(ngModel)]="quantite" placeholder="Quantité">
+    <button type="button" class="btn btn-primary" (click)="addMedicament()">Ajouter</button>
+  </div>
+  <div *ngIf="medicaments.length > 0">
+    <button type="button" class="btn btn-primary" (click)="confirmSelection()">Terminer</button>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="dismissModal()">Annuler</button>
+</div>

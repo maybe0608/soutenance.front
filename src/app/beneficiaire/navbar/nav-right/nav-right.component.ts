@@ -34,7 +34,7 @@ export class NavRightComponent implements OnInit{
 
   logout() {
     localStorage.removeItem('user');
-    this.router.navigate(['/']); 
+    this.router.navigate(['/beneficiaire']); 
 
     // Redirection après la déconnexion si nécessaire
   }
