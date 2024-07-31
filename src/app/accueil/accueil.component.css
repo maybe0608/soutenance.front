@@ -2835,11 +2835,11 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #ff91bf;
-  --bs-btn-border-color: #ffc800;
+  --bs-btn-bg: #3391496b;
+  --bs-btn-border-color: #00000000;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #d9aa00;
-  --bs-btn-hover-border-color: #cca000;
+  --bs-btn-hover-bg: #1d7624;
+  --bs-btn-hover-border-color: #1600cc00;
   --bs-btn-focus-shadow-rgb: 255, 208, 38;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #cca000;
@@ -10891,10 +10891,11 @@ p {
   height: 1.5rem;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji,";
   font-size: 0.95rem;
-  color: #fff;
+  color:var(--bs-modal-bg);
   letter-spacing: 0.0625em;
+  font-weight: bold;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #ffc800;
@@ -10905,7 +10906,7 @@ p {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
-    background-color: rgba(15, 81, 50, 0.5) ;
+    background-color: rgba(15 81 50 / 0%);
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -10941,7 +10942,7 @@ header.masthead {
   /* text-align: right; */
   margin-right: -10rem; 
   color: #0f6444;
-  background-image: url("./img/header-bg.jpg");
+  background-image: url("./img/toto.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;

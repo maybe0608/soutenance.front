@@ -6,6 +6,8 @@ import { BeneficiaireComponent } from './beneficiaire/beneficiaire.component';
 import { DonateurComponent } from './donateur/donateur.component';
 import { DashboardonateurComponent } from './donateur/dashboardonateur/dashboardonateur.component';
 import { FormdemandeComponent } from './beneficiaire/formdemande/formdemande.component';
+import { BenevoleComponent } from './benevole/benevole.component';
+import { DashboarbenevoleComponent } from './benevole/dashboarbenevole/dashboarbenevole.component';
 export const routes: Routes = [
     //generale
     { path: '', component: AccueilComponent },
@@ -20,5 +22,7 @@ export const routes: Routes = [
    {path:'donateur', component: DonateurComponent},
     {path:'donateur/monCompte', component: DashboardonateurComponent},
     {path:'donateur/monCompte/Don', component:FormdonComponent},
-    
+    // benevole
+    {path:'benevole', component: BenevoleComponent},
+    {path:'benevole/monCompte', component: DashboarbenevoleComponent},
 ];
