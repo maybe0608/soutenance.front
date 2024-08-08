@@ -1,0 +1,23 @@
+<ul class="list-unstyled d-flex">
+    <li class="pc-h-item">
+      <a class="pc-head-link me-0 bg-gray-200"></a>
+    </li>
+    <li class="dropdown pc-h-item header-user-profile" ngbDropdown>
+      <a class="pc-head-link dropdown-toggle arrow-none me-0" ngbDropdownToggle>
+        <span class="f-w-600">{{ profile || 'Jonh' }}</span>
+      </a>
+      <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown" ngbDropdownMenu>
+        <div class="dropdown-header">
+          <div class="d-flex mb-1">
+            <div class="flex-grow-1 ms-3 text-start">
+              <h6 class="mb-0">{{ profile || 'JWT User' }}</h6>
+              <span>Volontaire</span>
+            </div>
+            <a class="bg-transparent" (click)="logout()">Déconnexion</a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+  

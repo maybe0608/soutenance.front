@@ -1,1 +1,76 @@
-<p>dashboarbenevole works!</p>
+<router-outlet></router-outlet>
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <!-- Tableau des demandes assignées au bénévole -->
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Demandes assignées</h5>
+                    <input type="text" placeholder="Rechercher par nom de bénéficiaire" [(ngModel)]="searchTerm" class="form-control mb-3" (input)="searchBeneficiaire()">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Numéro</th>
+                                <th>Nom du bénéficiaire</th>
+                                <th>Nombre de Demandes</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let demande of filteredDemandes">
+                                <td>{{ demande.id }}</td>
+                                <td>{{ demande.nom }}</td>
+                                <td>{{ demande.nb_demande }}</td>
+                                <td>
+                                    <button class="btn btn-info" (click)="viewDetails(demande.id)">Détails</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Contact & Support -->
+        <div class="col-md-6 mt-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Contact & Support</h5>
+                    <p>Pour toute question et support, contactez-nous</p>
+                    <div class="support-chat">
+                        <a href="mailto:maimounathiammm@gmail.com">Support</a>
+                        <p>Phone: +221 77 875 87 53</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- The Modal -->
+<div id="detailsModal" class="modal" [ngClass]="{'show': isModalVisible}">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <h2>Détails de la Demande</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Médicament</th>
+                    <th>Quantité</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let detail of demandeDetails">
+                    <td>{{ detail.medicament_nom }}</td>
+                    <td>{{ detail.quantite }}</td>
+                    <td>{{ detail.statut }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="button-container">
+            <button id="validateButton" class="btn btn-primary" (click)="validateDemande()">Valider</button>
+            <button id="refuseButton" class="btn btn-danger" (click)="refuseDemande()">Refuser</button>
+        </div>
+    </div>
+</div>

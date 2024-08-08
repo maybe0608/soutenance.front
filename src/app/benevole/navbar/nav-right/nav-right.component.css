@@ -1,0 +1,64 @@
+.pc-h-item {
+    position: relative;
+    padding: 0 15px;
+    .pc-head-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        color: #007bff;
+      }
+    }
+    .btn-don {
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      padding: 5px 10px;
+      text-decoration: none;
+      &:hover {
+        background-color: #0056b3;
+        color: #fff;
+      }
+    }
+    .header-user-profile {
+      .dropdown-user-profile {
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .dropdown-header {
+          background-color: #18c223;
+          color: #fff;
+          border-bottom: 1px solid #e9ecef;
+          padding: 10px;
+          h6 {
+            margin: 0;
+          }
+          span {
+            font-size: 0.875rem;
+          }
+          .logout-link {
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+            &:hover {
+              color: #e9ecef;
+            }
+          }
+        }
+        .dropdown-menu-end {
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+  }
+  li {
+    cursor: pointer; /* Change le curseur au survol */
+    padding: 10px; /* Ajoute un espacement pour rendre les éléments cliquables plus grands */
+    transition: background-color 0.3s; /* Ajoute une transition pour le changement de couleur de fond */
+  }
+  
+  li:hover {
+    background-color: #f1f1f1; /* Change la couleur de fond au survol */
+  }
+  

@@ -1,0 +1,184 @@
+/* Container spacing */
+.container {
+    margin-top: 20px;
+    background-image: url('../img/PHARMACIESociale.png'); /* Path to your background image */
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Card styles */
+  .card {
+    margin-bottom: 20px;
+    border: 1px solid #d4edda;
+    background-color: #7de1d045;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h5 {
+    color: #155724;
+  }
+  
+  /* Table styles */
+  .table {
+    background-color: #ffffff;
+  }
+  
+  .table thead {
+    background-color: #e9ecef;
+  }
+  
+  .table th {
+    color: #155724;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  /* Support chat styles */
+  .support-chat {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #e2e3e5;
+  }
+  
+  .list-group-item {
+    background-color: #f8f9fa;
+    border: 1px solid #d4edda;
+  }
+  
+  .list-group-item .d-flex div {
+    color: #155724;
+  }
+  
+  /* Left column margin */
+  @media (min-width: 768px) {
+    .left-column {
+      margin-top: 60px;
+    }
+  }
+  
+  /* Pharmacy colors */
+  .bg-primary {
+    background-color: #007bff !important;
+  }
+  
+  .bg-secondary {
+    background-color: #6c757d !important;
+  }
+  
+  .bg-success {
+    background-color: #28a745 !important;
+  }
+  
+  .bg-danger {
+    background-color: #dc3545 !important;
+  }
+  
+  .bg-warning {
+    background-color: #ffc107 !important;
+  }
+  
+  .bg-info {
+    background-color: #17a2b8 !important;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  .bg-dark {
+    background-color: #343a40 !important;
+  }
+  
+  .text-white {
+    color: #fff !important;
+  }
+  
+  .text-muted {
+    color: #6c757d !important;
+  }
+  /* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal.show {
+    display: block; /* Show the modal */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button styles */
+.btn {
+    padding: 6px 10px; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    margin: 5px; /* Space between buttons */
+    border-radius: 4px; /* Rounded corners */
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #1fa412;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #12b300c4;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Align buttons horizontally */
+.modal-content .button-container {
+    display: flex; /* Flexbox for horizontal alignment */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Space above buttons */
+}

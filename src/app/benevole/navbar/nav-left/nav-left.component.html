@@ -1,0 +1,24 @@
+<!-- nav-left.component.html -->
+<ul class="list-unstyled">
+    <li class="pc-h-item pc-sidebar-collapse">
+      <a href="javascript:" title="click to menu collapse" class="pc-head-link ms-0" (click)="toggleNav()">
+        <i antIcon [type]="navCollapsed ? menuUnfoldIcon : menuFoldIcon" theme="outline"></i>
+      </a>
+    </li>
+  </ul>
+  
+  <div *ngIf="!navCollapsed" class="full-page-nav">
+    <ul class="list-unstyled">
+      <li class="pc-h-item">
+        <a routerLink="/" class="pc-head-link">Home</a>
+      </li>
+      <li class="pc-h-item">
+        <a routerLink="" class="pc-head-link">About</a>
+      </li>
+      <li class="pc-h-item">
+        <a routerLink="" class="pc-head-link">Contact</a>
+      </li>
+    </ul>
+  </div>
+  
+  <router-outlet></router-outlet>
